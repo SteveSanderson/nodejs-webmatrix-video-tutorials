@@ -1,8 +1,9 @@
-<div class="response">
+<form class="response" data-bind="validate: submitRsvp">
     <h1>Your reply</h1>
     <div class="from">
         <label>From:</label>
-        <span><input data-bind="value: respondeeName" placeholder="Your name" /></span>
+        <span><input data-bind="value: respondeeName, uniqueName: true"
+                     placeholder="Your name" class="required" minlength="3" maxlength="20" /></span>
     </div>
     
     <p>Thanks for the invitation! I'm happy with the following choices:</p>
@@ -16,6 +17,6 @@
         </p>
     </div>
     <p>
-        <button class="big bright" data-bind="click: submitRsvp">Send reply</button>
+        <button class="big bright" type="submit">Send reply</button>
     </p>
-</div>
+</form>

@@ -51,7 +51,7 @@ input:not([type]), input[type=text], textarea { background-color: #FFC; border: 
 
 .choice-list { margin-bottom: 1.5em; }
 .choice-list button { background: none; border: none; cursor: pointer; border-bottom: 1px dashed navy; padding: 0px; float:right; line-height: 1.7em; }
-.choice-list div { margin-right: 4em; text-align: center; }
+.choice-list div { margin-right: 4em; padding-left: 0.5em; }
 .choice-list input { width: 97%; box-sizing: border-box; }
 
 .invite-url { display: block; text-align: center; border: 1px dashed #888; padding: 0.6em; font-weight: bold; background-color: #DDD; font-size: 115%; }
@@ -154,3 +154,6 @@ button.dim {
     background-image: -o-linear-gradient(top, #ffffff 0%, #999  100%);
     background-image: -ms-linear-gradient(top, #ffffff 0%, #999  100%);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#999)); }
+
+label.error { display: block; color: red; font-weight: bold; text-align: left; margin-top: 0.5em; }
+input.error, textarea.error { border: 1px solid red; background-color: #FDC }

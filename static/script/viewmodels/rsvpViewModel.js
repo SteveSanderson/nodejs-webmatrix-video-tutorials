@@ -28,7 +28,9 @@ function rsvpViewModel(invitationId) {
     };
 
     function refreshData() {
-        $.getJSON('/api/invitations/' + invitationId, self.invitation);
+        $.getJSON('/api/invitations/' + invitationId, self.invitation).fail(function(req) {
+            alert('Sorry - "' + invitationId + '" could not be loaded. Error ' + (req ? req.status : 'unknown'));
+        });
     }
     refreshData();
 }

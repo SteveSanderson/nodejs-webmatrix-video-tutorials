@@ -8,8 +8,9 @@ CACHE:
 /rsvp
 /styles/app.css
 /script/jquery-1.7.2.min.js
+/script/jquery.validate.min.js
 /script/knockout-2.1.0.js
-/script/iOS-app-link.js
+/script/util.js
 /script/viewmodels/invitationViewModel.js
 /script/viewmodels/rsvpViewModel.js
 

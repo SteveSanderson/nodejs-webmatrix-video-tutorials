@@ -26,6 +26,7 @@ app.post('/invitations/:id/votes', function(req, res) {
     if (invitation) {
         invitation.votes.push(new vote(req.body));
         db.save(invitation);
+        app.emit('invitationUpdate', invitation);
         res.send(200);
     } else {
         res.send(404);

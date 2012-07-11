@@ -27,6 +27,8 @@ function invitationViewModel() {
         var params = { data: ko.toJSON(self), type: 'post', contentType: 'application/json' };
         $.ajax('/api/invitations', params).done(function(result) {
             self.id(result.id);
+        }).fail(function(req) {
+            alert("Sorry, couldn't save. Please make sure you're online!");
         });
     }
             

@@ -20,5 +20,12 @@
         var id = location.hash.substring(1),
             viewModel = new rsvpViewModel(id);
         ko.applyBindings(viewModel);
+
+        // Connect to the socket.io endpoint, and update viewmodel on notification
+        setTimeout(function () {
+            var socket = io.connect(null, { resource: 'api/socket.io' });
+            socket.on('connect', function () { socket.emit('registerInterest', id); });
+            socket.on('invitationUpdate', viewModel.invitation);
+        });
     })();
 </script>

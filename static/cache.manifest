@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Application version: 1
+# Application version: 2
 # Note: increment this each time you deploy to force all clients to refresh
 
 CACHE:
@@ -13,6 +13,7 @@ CACHE:
 /script/util.js
 /script/viewmodels/invitationViewModel.js
 /script/viewmodels/rsvpViewModel.js
+/api/socket.io/socket.io.js
 
 NETWORK:
 /api/
